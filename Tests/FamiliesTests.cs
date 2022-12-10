@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CYeAutomation.Tests.Data;
 using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using static CYeAutomation.Loading.LoadingJsons;

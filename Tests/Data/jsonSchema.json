@@ -1,0 +1,102 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome7",
+  "definitions": {
+    "Welcome7": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/definitions/Person"
+            }
+          }
+        },
+        "families": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/definitions/Family"
+            }
+          }
+        }
+      },
+      "required": [
+        "families",
+        "people"
+      ],
+      "title": "Welcome7"
+    },
+    "Family": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "surname": {
+          "type": "string"
+        },
+        "has_kids": {
+          "type": "boolean"
+        },
+        "parents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kids": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kids_num": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "has_kids",
+        "kids",
+        "kids_num",
+        "parents",
+        "surname"
+      ],
+      "title": "Family"
+    },
+    "Person": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "family_member": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "age",
+        "family_member",
+        "name",
+        "surname"
+      ],
+      "title": "Person"
+    }
+  }
+}

@@ -3,7 +3,7 @@ using NUnit.Framework;
 using static CYeAutomation.Loading.LoadingJsons;
 using static CYeAutomation.Tests.Data.JsonFilesPath;
 
-namespace CYeAutomation.Tests.Data
+namespace CYeAutomation.Tests
 {
     public class BaseTest
     {

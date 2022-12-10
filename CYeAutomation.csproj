@@ -16,9 +16,18 @@
     </ItemGroup>
 
     <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-        <None Update="Tests\Data\Jsons\jsonSchema.json">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <None Update="Tests\Data\jsonSchema.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Tests\Data\jsonValidValues.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(SolutionDir)Tests\Data\People\**" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="$(SolutionDir)Tests\Data\Families\**" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
 
 </Project>

@@ -1,4 +1,3 @@
-using CYeAutomation.Tests.Data;
 using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using static CYeAutomation.Loading.LoadingJsons;
@@ -6,9 +5,9 @@ using static CYeAutomation.Tests.Data.JsonFilesPath;
 
 namespace CYeAutomation.Tests
 {
-    public class PersonTests : BaseTest
+    public class PeopleTests : BaseTest
     {
-        // Sanity
+        // Sanity - valid
         [Test]
         public void WhenAllFieldsAreCorrects_AndFitTheRules_ThenTheJsonIsValid()
         {
@@ -48,7 +47,7 @@ namespace CYeAutomation.Tests
         [Test]
         public void WhenFamilyMemberIsMissing_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(MissingPersonFamilyMember);
+            var jsonValue = LoadingJsonAsJobject(MissingPersonFamilyMemberPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
@@ -57,90 +56,89 @@ namespace CYeAutomation.Tests
         [Test]
         public void WhenIncorrectPersonQuantityDigitId_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonQuantityDigitId);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonQuantityDigitIdPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonLettersInDigitId_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonLettersInDigitId);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonLettersInDigitIdPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonCharactersInDigitId_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonCharactersInDigitId);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonCharactersInDigitIdPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
+
         // Person name
         [Test]
         public void WhenIncorrectPersonNameWithNumbers_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithNumbers);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithNumbersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenPersonNameWithCharacters_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithCharacters);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithCharactersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
+
         // Person surname
         [Test]
         public void WhenIncorrectPersonSurnameWithNumbers_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithNumbers);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithNumbersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonSurnameWithCharacters_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithCharacters);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithCharactersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
+
         // Person age
         [Test]
         public void WhenIncorrectPersonAgeWithLetters_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonAgeWithLetters);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonAgeWithLettersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonAgeWithCharacters_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonAgeWithCharacters);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonAgeWithCharactersPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
+
         // Family member
         [Test]
         public void WhenIncorrectPersonFamilyMemberWithNumber_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithNumber);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithNumberPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonFamilyMemberWithCharacter_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithCharacter);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithCharacterPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
         public void WhenIncorrectPersonFamilyMemberCanNotBe_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberCanNotBe);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberCanNotBePath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
     }
 }
