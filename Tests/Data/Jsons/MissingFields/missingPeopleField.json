@@ -1,0 +1,31 @@
+﻿{
+  "families": [
+    {
+      "999-8234": {
+        "surname": "shemesh",
+        "has_kids": true,
+        "parents": [
+          "peter",
+          "sima"
+        ],
+        "kids": [
+          "yoni",
+          "shani"
+        ],
+        "kids_num": 2
+      }
+    },
+    {
+      "999-8232": {
+        "surname": "yakir",
+        "has_kids": false,
+        "parents": [
+          "lior",
+          "yuval"
+        ],
+        "kids": null,
+        "kids_num": 0
+      }
+    }
+  ]
+}
