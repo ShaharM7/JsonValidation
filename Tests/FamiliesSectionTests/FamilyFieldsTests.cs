@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Schema;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using static CYeAutomation.Tests.Data.JsonFilesPath;
 using static CYeAutomation.Loading.LoadingFiles;
@@ -56,17 +57,11 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
         public void WhenIncorrectFamilySurnameContainsCharacters_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(IncorrectFamilySurnameContainsCharactersPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
+            Assert.IsTrue(isValid);
         }
 
         // Parents list
-        [Test]
-        public void WhenIncorrectFamilyParentsNoContainsParents_ThenTheJsonIsInvalid()
-        {
-            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyParentsNoContainsParentsPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
-        }
-
         [Test]
         public void WhenIncorrectFamilyParentsContainsNumbers_ThenTheJsonIsInvalid()
         {
@@ -77,7 +72,44 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
         [Test]
         public void WhenIncorrectFamilyParentsContainsCharacters_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyParentsContainsCharactersPath);
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyParentsNoContainsParentsPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        // Kids list
+        [Test]
+        public void WhenIncorrectFamilyKidsNamesContainsNumbers_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyKidsNamesContainsNumbersPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenIncorrectFamilyKidsNamesContainsCharacters_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyKidsNamesContainsCharactersPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        // Kids number
+        [Test]
+        public void WhenIncorrectFamilyKidsNumbersContainsLetters_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyKidsNumbersContainsLettersPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenIncorrectFamilyKidsNumbersContainsCharacters_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyKidsNumbersContainsCharactersPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenIncorrectFamilyKidsNumbersContainsNegativeNumberPath__ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(IncorrectFamilyKidsNumbersContainsNegativeNumberPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
     }

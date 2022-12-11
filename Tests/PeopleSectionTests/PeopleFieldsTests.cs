@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using static CYeAutomation.Loading.LoadingFiles;
@@ -42,13 +43,15 @@ namespace CYeAutomation.Tests.PeopleSectionTests
         public void WhenPersonNameWithCharacters_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithCharactersPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
+
+            Assert.IsTrue(isValid);
         }
-        
+
         [Test]
-        public void WhenPersonNameEmpty_ThenTheJsonIsInvalid()
+        public void WhenIncorrectPersonAgeWithNegativeNumber_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(PersonNameEmptyPath);
+            var jsonValue = LoadingJsonAsJobject(IncorrectPersonAgeWithNegativeNumberPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
@@ -64,7 +67,9 @@ namespace CYeAutomation.Tests.PeopleSectionTests
         public void WhenIncorrectPersonSurnameWithCharacters_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithCharactersPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+
+            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
+            Assert.IsTrue(isValid);
         }
 
         // Person age

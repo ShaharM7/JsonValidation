@@ -1,6 +1,4 @@
-﻿using NUnit.Framework;
-
-namespace CYeAutomation.Tests.Data
+﻿namespace CYeAutomation.Tests.Data
 {
     public static class JsonFilesPath
     {
@@ -35,9 +33,17 @@ namespace CYeAutomation.Tests.Data
         // Age
         public static string IncorrectPersonAgeWithLettersPath = "Tests/Data/People/IncorrectFields/IncorrectPersonAge/incorrectPersonAgeWithLetters.json";
         public static string IncorrectPersonAgeWithCharactersPath = "Tests/Data/People/IncorrectFields/IncorrectPersonAge/incorrectPersonAgeWithCharacters.json";
-
+        public static string IncorrectPersonAgeWithNegativeNumberPath = "Tests/Data/People/IncorrectFields/IncorrectPersonAge/incorrectPersonAgeWithNegativeNumber.json";
+        
         // Family member
         public static string IncorrectPersonFamilyMemberCanNotBePath = "Tests/Data/People/IncorrectFields/IncorrectFamilyMember/incorrectPersonFamilyMemberCanNotBe.json";
+        
+        
+        // Empty fields
+        public static string PersonNameEmptyPath = "Tests/Data/People/EmptyFields/personNameEmpty.json";
+        public static string PersonSurnameEmptyPath = "Tests/Data/People/EmptyFields/personSurnameEmpty.json";
+        public static string PersonAgeEmptyPath = "Tests/Data/People/EmptyFields/PersonAgeEmpty.json";
+        public static string PersonFamilyMemberEmptyPath = "Tests/Data/People/EmptyFields/PersonFamilyMemberEmpty.json";
         
         
         
@@ -64,16 +70,23 @@ namespace CYeAutomation.Tests.Data
         public static string IncorrectFamilySurnameContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilySurname/incorrectFamilySurnameContainsCharacters.json";
         
         // Parents list
-        public static string IncorrectFamilyParentsNoContainsParentsPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsNoContainsParents.json";
         public static string IncorrectFamilyParentsContainsNumbersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsNumbers.json";
-        public static string IncorrectFamilyParentsContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsCharacters.json";
-
+        public static string IncorrectFamilyParentsNoContainsParentsPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsCharacters.json";
         
+        // Kids list
+        public static string IncorrectFamilyKidsNamesContainsNumbersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyKidsNames/incorrectFamilyKidsNamesContainsNumbers.json";
+        public static string IncorrectFamilyKidsNamesContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyKidsNames/incorrectFamilyKidsNamesContainsCharacters.json";
         
+        // Kids number
+        public static string IncorrectFamilyKidsNumbersContainsLettersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyKidsNumber/IncorrectFamilyKidsNumbersContainsLetters.json";
+        public static string IncorrectFamilyKidsNumbersContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyKidsNumber/IncorrectFamilyKidsNumbersContainsCharacters.json";
+        public static string IncorrectFamilyKidsNumbersContainsNegativeNumberPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyKidsNumber/IncorrectFamilyKidsNumbersContainsNegativeNumber.json";
         
-        public static string PersonNameEmptyPath = "Tests/Data/People/EmptyFields/personNameEmpty.json";
-
-
-
+        // Cause and Effect
+        public static string KidsListIsEmptyThenKidsNumIsEqualToZeroPath = "Tests/Data/Families/CauseAndEffect/KidsListIsEmptyThenKidsNumIsEqualToZero.json";
+        
+        // Empty
+        public static string FamilySurnameFieldEmptyPath = "Tests/Data/Families/EmptyFields/familySurnameFieldEmpty.json";
+        public static string FamilyParentsFieldEmptyPath = "Tests/Data/Families/EmptyFields/familyParentsFieldEmpty.json";
     }
 }
