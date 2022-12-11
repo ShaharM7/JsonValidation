@@ -105,5 +105,11 @@
         }
       }
     }
+  },
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    }
   }
 }

@@ -67,7 +67,11 @@ namespace CYeAutomation.Tests.Data
         public static string IncorrectFamilyParentsNoContainsParentsPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsNoContainsParents.json";
         public static string IncorrectFamilyParentsContainsNumbersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsNumbers.json";
         public static string IncorrectFamilyParentsContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsCharacters.json";
+
         
+        
+        
+        public static string PersonNameEmptyPath = "Tests/Data/People/EmptyFields/personNameEmpty.json";
 
 
 
