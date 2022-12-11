@@ -5,7 +5,7 @@ using static CYeAutomation.Tests.Data.JsonFilesPath;
 
 namespace CYeAutomation.Tests.PeopleSectionTests
 {
-    public class IncorrectPeopleFieldsTests : BaseTest
+    public class PeopleFieldsTests : BaseTest
     {
         // Incorrect fields
         // Person digit id

@@ -5,7 +5,7 @@ using static CYeAutomation.Loading.LoadingFiles;
 
 namespace CYeAutomation.Tests.FamiliesSectionTests
 {
-    public class FamiliesTests : BaseTest
+    public class FamilyFieldsTests : BaseTest
     {
         // Incorrect fields
         // Digit id
