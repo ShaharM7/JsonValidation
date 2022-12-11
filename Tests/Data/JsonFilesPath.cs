@@ -1,4 +1,6 @@
-﻿namespace CYeAutomation.Tests.Data
+﻿using NUnit.Framework;
+
+namespace CYeAutomation.Tests.Data
 {
     public static class JsonFilesPath
     {
@@ -35,8 +37,6 @@
         public static string IncorrectPersonAgeWithCharactersPath = "Tests/Data/People/IncorrectFields/IncorrectPersonAge/incorrectPersonAgeWithCharacters.json";
 
         // Family member
-        public static string IncorrectPersonFamilyMemberWithNumberPath = "Tests/Data/People/IncorrectFields/IncorrectFamilyMember/incorrectPersonFamilyMemberWithNumber.json";
-        public static string IncorrectPersonFamilyMemberWithCharacterPath = "Tests/Data/People/IncorrectFields/IncorrectFamilyMember/incorrectPersonFamilyMemberWithCharacter.json";
         public static string IncorrectPersonFamilyMemberCanNotBePath = "Tests/Data/People/IncorrectFields/IncorrectFamilyMember/incorrectPersonFamilyMemberCanNotBe.json";
         
         
@@ -52,11 +52,24 @@
         public static string MissingKidsNumberPath = "Tests/Data/Families/MissingFields/MissingFamilyFields/missingFamilyKidsNumber.json";
         
         // Incorrect fields
+        // Digit id
+        public static string IncorrectFamilyQuantityDigitIdPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyDigitId/incorrectFamilyQuantityDigitId.json";
+        public static string IncorrectFamilyDigitIdNotStartWithExpectedPrefixPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyDigitId/incorrectFamilyDigitIdNotStartWithExpectedPrefix.json";
+        public static string IncorrectFamilyDigitIdNotContainsHyphenPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyDigitId/incorrectFamilyDigitIdNotContainsHyphen.json";
+        public static string IncorrectFamilyDigitIdContainsLettersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyDigitId/incorrectFamilyDigitIdContainsLetters.json";
+        public static string IncorrectFamilyDigitIdContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyDigitId/incorrectFamilyDigitIdContainsCharacters.json";
+
+        // Surname
+        public static string IncorrectFamilySurnameContainsNumbersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilySurname/incorrectFamilySurnameContainsNumbers.json";
+        public static string IncorrectFamilySurnameContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilySurname/incorrectFamilySurnameContainsCharacters.json";
         
+        // Parents list
+        public static string IncorrectFamilyParentsNoContainsParentsPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsNoContainsParents.json";
+        public static string IncorrectFamilyParentsContainsNumbersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsNumbers.json";
+        public static string IncorrectFamilyParentsContainsCharactersPath = "Tests/Data/Families/IncorrectFields/IncorrectFamilyParentsList/incorrectFamilyParentsContainsCharacters.json";
         
-        
-        
-        
-        
+
+
+
     }
 }
