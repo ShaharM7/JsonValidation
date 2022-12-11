@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json.Schema;
+﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using static CYeAutomation.Loading.LoadingFiles;
 using static CYeAutomation.Tests.Data.JsonFilesPath;
@@ -20,7 +22,12 @@ namespace CYeAutomation.Tests
         public void WhenAllFieldsAreCorrects_AndFitTheRules_ThenTheJsonIsValid()
         {
             var jsonValue = LoadingJsonAsJobject(JsonValidValuesPath);
-            Assert.IsTrue(jsonValue.IsValid(JsonSchema!));
+            
+            IList<ValidationError> messages;
+            var isValid = jsonValue.IsValid(JsonSchema!, out messages);
+            //Console.WriteLine(messages[0].Message);
+            
+            Assert.IsTrue(isValid);
         }
     }
 }

@@ -1,100 +1,103 @@
 ﻿{
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/FamiliesStatus",
-  "definitions": {
-    "FamiliesStatus": {
+  "type": "object",
+  "required": [
+    "people",
+    "families"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "people": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/people"
+      }
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/family"
+      }
+    }
+  },
+  "$defs": {
+    "people": {
       "type": "object",
       "additionalProperties": false,
-      "properties": {
-        "people": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/definitions/Person"
-            }
-          }
-        },
-        "families": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/definitions/Family"
+      "patternProperties": {
+        "^\\d{5}$": {
+          "type": "object",
+          "required": [
+            "name",
+            "surname",
+            "age",
+            "family_member"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "surname": {
+              "type": "string"
+            },
+            "age": {
+              "type": "number",
+              "minimum": 0
+            },
+            "family_member": {
+              "type": "string",
+              "enum": [
+                "kid",
+                "parent"
+              ]
             }
           }
         }
-      },
-      "required": [
-        "families",
-        "people"
-      ]
+      }
     },
-    "Family": {
+    "family": {
       "type": "object",
       "additionalProperties": false,
-      "properties": {
-        "surname": {
-          "type": "string"
-        },
-        "has_kids": {
-          "type": "boolean"
-        },
-        "parents": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "kids": {
-          "anyOf": [
-            {
+      "patternProperties": {
+        "^999-\\d{4}$": {
+          "type": "object",
+          "required": [
+            "surname",
+            "has_kids",
+            "parents",
+            "kids",
+            "kids_num"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "surname": {
+              "type": "string"
+            },
+            "has_kids": {
+              "type": "boolean"
+            },
+            "parents": {
               "type": "array",
               "items": {
                 "type": "string"
               }
             },
-            {
-              "type": "null"
+            "kids": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "kids_num": {
+              "type": "number",
+              "minimum": 0
             }
-          ]
-        },
-        "kids_num": {
-          "type": "integer"
+          }
         }
-      },
-      "required": [
-        "has_kids",
-        "kids",
-        "kids_num",
-        "parents",
-        "surname"
-      ],
-      "title": "Family"
-    },
-    "Person": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "surname": {
-          "type": "string"
-        },
-        "age": {
-          "type": "integer"
-        },
-        "family_member": {
-          "enum": ["kid", "parent"]
-        }
-      },
-      "required": [
-        "age",
-        "family_member",
-        "name",
-        "surname"
-      ],
-      "title": "Person"
+      }
     }
   }
 }
