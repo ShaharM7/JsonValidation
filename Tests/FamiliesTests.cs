@@ -1,27 +1,54 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json.Schema;
+﻿using Newtonsoft.Json.Schema;
 using NUnit.Framework;
-using static CYeAutomation.Loading.LoadingJsons;
+using static CYeAutomation.Tests.Data.JsonFilesPath;
+using static CYeAutomation.Loading.LoadingFiles;
 
 namespace CYeAutomation.Tests
 {
     public class FamiliesTests : BaseTest
     {
-        // Missing section 
+        // Missing Families section 
         [Test]
         public void WhenJsonHasNotHaveFamiliesSection_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject("");
-            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> errors);
-            Assert.IsFalse(isValid, errors[0].Message);
+            var jsonValue = LoadingJsonAsJobject(MissingFamiliesSectionPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        // Missing fields
+        [Test]
+        public void WhenMissingFamilyDigitNumber_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(MissingFamilyDigitNumberPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
-        public void WhenJsonHasNotHavePeopleSection_ThenTheJsonIsInvalid()
+        public void WhenMissingFamilySurname_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject("");
-            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> errors);
-            Assert.IsFalse(isValid, errors[0].Message);
+            var jsonValue = LoadingJsonAsJobject(MissingFamilySurnamePath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenMissingFamilyParentsList_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(MissingFamilyParentsListPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenMissingMissingFamilyKidsNamesList_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(MissingFamilyKidsNamesListPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
+        }
+
+        [Test]
+        public void WhenMissingFamilyKidsNumber_ThenTheJsonIsInvalid()
+        {
+            var jsonValue = LoadingJsonAsJobject(MissingKidsNumberPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
     }
 }

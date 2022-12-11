@@ -1,8 +1,8 @@
 ﻿{
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome7",
+  "$ref": "#/definitions/FamiliesStatus",
   "definitions": {
-    "Welcome7": {
+    "FamiliesStatus": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -28,8 +28,7 @@
       "required": [
         "families",
         "people"
-      ],
-      "title": "Welcome7"
+      ]
     },
     "Family": {
       "type": "object",
@@ -75,7 +74,6 @@
     },
     "Person": {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
@@ -87,7 +85,7 @@
           "type": "integer"
         },
         "family_member": {
-          "type": "string"
+          "enum": ["kid", "parent"]
         }
       },
       "required": [

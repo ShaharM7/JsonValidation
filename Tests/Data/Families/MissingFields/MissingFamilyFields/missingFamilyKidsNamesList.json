@@ -1,7 +1,7 @@
-{
+﻿{
   "people": [
     {
-      "5": {
+      "03954": {
         "name": "yoni",
         "surname": "shemesh",
         "age": 2,
@@ -47,10 +47,6 @@
         "parents": [
           "peter",
           "sima"
-        ],
-        "kids": [
-          "yoni",
-          "shani"
         ],
         "kids_num": 2
       }

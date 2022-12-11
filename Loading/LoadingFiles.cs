@@ -5,7 +5,7 @@ using Newtonsoft.Json.Schema;
 
 namespace CYeAutomation.Loading
 {
-    public static class LoadingJsons
+    public static class LoadingFiles
     {
         public static JObject LoadingJsonAsJobject(string jsonPath)
         {

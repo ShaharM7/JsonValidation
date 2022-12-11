@@ -29,5 +29,4 @@
         <None Include="$(SolutionDir)Tests\Data\Families\**" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
-
 </Project>

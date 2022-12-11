@@ -1,51 +1,51 @@
 using Newtonsoft.Json.Schema;
 using NUnit.Framework;
-using static CYeAutomation.Loading.LoadingJsons;
+using static CYeAutomation.Loading.LoadingFiles;
 using static CYeAutomation.Tests.Data.JsonFilesPath;
 
 namespace CYeAutomation.Tests
 {
     public class PeopleTests : BaseTest
     {
-        // Sanity - valid
+        // Missing Person section
         [Test]
-        public void WhenAllFieldsAreCorrects_AndFitTheRules_ThenTheJsonIsValid()
+        public void WhenJsonHasNotHavePeopleSection_ThenTheJsonIsInvalid()
         {
-            var jsonValue = LoadingJsonAsJobject(JsonValidValuesPath);
-            Assert.IsTrue(jsonValue.IsValid(JsonSchema!));
+            var jsonValue = LoadingJsonAsJobject(MissingPersonSectionPath);
+            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         // Missing person fields
         [Test]
-        public void WhenPersonDigitIdIsMissing_ThenTheJsonIsInvalid()
+        public void WhenMissingPersonDigitId_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(MissingPersonDigitIdPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
-        public void WhenPersonNameIsMissing_ThenTheJsonIsInvalid()
+        public void WhenMissingPersonName_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(MissingPersonNamePath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
-        public void WhenPersonSurnameIsMissing_ThenTheJsonIsInvalid()
+        public void WhenMissingPersonSurname_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(MissingPersonSurnamePath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
-        public void WhenPersonAgeIsMissing_ThenTheJsonIsInvalid()
+        public void WhenMissingPersonAge_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(MissingPersonAgePath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
 
         [Test]
-        public void WhenFamilyMemberIsMissing_ThenTheJsonIsInvalid()
+        public void WhenMissingPersonFamilyMember_ThenTheJsonIsInvalid()
         {
             var jsonValue = LoadingJsonAsJobject(MissingPersonFamilyMemberPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
@@ -120,20 +120,6 @@ namespace CYeAutomation.Tests
         }
 
         // Family member
-        [Test]
-        public void WhenIncorrectPersonFamilyMemberWithNumber_ThenTheJsonIsInvalid()
-        {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithNumberPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
-        }
-
-        [Test]
-        public void WhenIncorrectPersonFamilyMemberWithCharacter_ThenTheJsonIsInvalid()
-        {
-            var jsonValue = LoadingJsonAsJobject(IncorrectPersonFamilyMemberWithCharacterPath);
-            Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
-        }
-
         [Test]
         public void WhenIncorrectPersonFamilyMemberCanNotBe_ThenTheJsonIsInvalid()
         {
