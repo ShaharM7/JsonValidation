@@ -45,7 +45,7 @@ namespace CYeAutomation.Tests.PeopleSectionTests
             var jsonValue = LoadingJsonAsJobject(IncorrectPersonNameWithCharactersPath);
             var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
 
-            Assert.IsTrue(isValid);
+            Assert.IsFalse(isValid);
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace CYeAutomation.Tests.PeopleSectionTests
             var jsonValue = LoadingJsonAsJobject(IncorrectPersonSurnameWithCharactersPath);
 
             var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
-            Assert.IsTrue(isValid);
+            Assert.False(isValid);
         }
 
         // Person age

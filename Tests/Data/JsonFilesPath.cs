@@ -86,5 +86,9 @@
         // Empty
         public const string FamilySurnameFieldEmptyPath = "Tests/Data/Families/EmptyFields/familySurnameFieldEmpty.json";
         public const string FamilyParentsFieldEmptyPath = "Tests/Data/Families/EmptyFields/familyParentsFieldEmpty.json";
+        
+        
+        // Cause and effect
+        public const string IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeen = "Tests/Data/People/CauseAndEffect/IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeen.json";
     }
 }

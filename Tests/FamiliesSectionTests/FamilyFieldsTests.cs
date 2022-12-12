@@ -58,7 +58,7 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
         {
             var jsonValue = LoadingJsonAsJobject(IncorrectFamilySurnameContainsCharactersPath);
             var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
-            Assert.IsTrue(isValid);
+            Assert.IsFalse(isValid);
         }
 
         // Parents list
