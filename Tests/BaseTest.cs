@@ -22,11 +22,8 @@ namespace CYeAutomation.Tests
         public void WhenAllFieldsAreCorrects_AndFitTheRules_ThenTheJsonIsValid()
         {
             var jsonValue = LoadingJsonAsJobject(JsonValidValuesPath);
-            
-            IList<ValidationError> messages;
-            var isValid = jsonValue.IsValid(JsonSchema!, out messages);
-            //Console.WriteLine(messages[0].Message);
-            
+
+            var isValid = jsonValue.IsValid(JsonSchema!, out IList<ValidationError> _);
             Assert.IsTrue(isValid);
         }
     }

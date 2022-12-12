@@ -55,6 +55,15 @@
                 "kid",
                 "parent"
               ]
+            },
+            "if": {
+              "properties": { "family_member": { "const": "kid" } }
+            },
+            "then": {
+              "properties": { "age": { "maximum": 17 } }
+            },
+            "else": {
+              "properties": { "age": { "minimum": 18} }
             }
           }
         }
@@ -116,10 +125,8 @@
       "minLength": 1
     },
     "personMustBelongToFamily": {
-    
     },
-    "EachFamilyMemberMustExistAsPerson": {
-      
+    "eachFamilyMemberMustExistAsPerson": {
     }
   }
 }

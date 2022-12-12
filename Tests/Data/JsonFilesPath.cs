@@ -86,10 +86,5 @@
         // Empty
         public const string FamilySurnameFieldEmptyPath = "Tests/Data/Families/EmptyFields/familySurnameFieldEmpty.json";
         public const string FamilyParentsFieldEmptyPath = "Tests/Data/Families/EmptyFields/familyParentsFieldEmpty.json";
-        
-        
-        // Cause and Effect
-        public const string KidsListIsEmptyThenKidsNumIsEqualToZeroPath = "Tests/Data/Families/CauseAndEffect/KidsListIsEmptyThenKidsNumIsEqualToZero.json";
-
     }
 }

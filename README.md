@@ -24,3 +24,6 @@ Starting points:
     * What is happens when field is empty ?
       (Handle with that by definition of: "nonEmptyString")
       
+* Each person must belong to family. Each family member must exist as a person.
+We can handle with that by 
+      
