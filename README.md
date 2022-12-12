@@ -10,7 +10,10 @@ Starting points:
   below or above that, but only that the number will be different from 5
 * Age can not be negative - can be zero (if we assumption that the number represent the years)
 * No needs to test the family 7 digit number for empty because the test that test the regex of the digit covers that
-
+* If integer type is empty it became string (For example: "") and error will appear,
+    so no needs to cover it with test.
+    And if I Will not fill the field error will appear.
+  
 
 * The tests are divided "People" section and "Families" section and as some parts:
     * What is happens when field doesn't exist - missing ?

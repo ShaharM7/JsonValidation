@@ -17,8 +17,8 @@ namespace CYeAutomation.Tests
             JsonSchema = LoadingJsonAsJSchema(JsonSchemaFilePath);
         }
         
-        // Sanity - valid
         [Test]
+        [Category("Sanity")]
         public void WhenAllFieldsAreCorrects_AndFitTheRules_ThenTheJsonIsValid()
         {
             var jsonValue = LoadingJsonAsJobject(JsonValidValuesPath);

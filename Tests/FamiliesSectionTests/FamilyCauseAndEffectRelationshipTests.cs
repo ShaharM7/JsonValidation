@@ -5,7 +5,7 @@ using static CYeAutomation.Loading.LoadingFiles;
 
 namespace CYeAutomation.Tests.FamiliesSectionTests
 {
-    public class FamilyCauseAndEffectRelationship : BaseTest
+    public class FamilyCauseAndEffectRelationshipTests : BaseTest
     {
         // Cause and effect
         public void WhenKidsListIsEmpty_ThenKidsNumIsEqualToZero()

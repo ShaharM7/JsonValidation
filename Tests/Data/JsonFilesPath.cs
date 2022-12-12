@@ -90,8 +90,6 @@
         
         // Cause and Effect
         public const string KidsListIsEmptyThenKidsNumIsEqualToZeroPath = "Tests/Data/Families/CauseAndEffect/KidsListIsEmptyThenKidsNumIsEqualToZero.json";
-        
-        
-       
+
     }
 }

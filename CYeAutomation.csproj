@@ -22,18 +22,6 @@
         <None Update="Tests\Data\jsonValidValues.json">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="Tests\Data\Families\IncorrectFields\IncorrectFamilyDigitId\incorrectFamilyQuantityDigitId.json">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="Tests\Data\Families\IncorrectFields\IncorrectFamilySurname\incorrectFamilySurnameContainsNumbers.json">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="Tests\Data\Families\IncorrectFields\IncorrectFamilySurname\incorrectFamilySurnameContainsCharacters.json">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="Tests\Data\Families\IncorrectFields\IncorrectFamilyParentsList\incorrectFamilyParentsContainsNumbers.json">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
     </ItemGroup>
 
     <ItemGroup>

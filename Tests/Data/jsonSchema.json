@@ -114,6 +114,12 @@
     "nonEmptyString": {
       "type": "string",
       "minLength": 1
+    },
+    "personMustBelongToFamily": {
+    
+    },
+    "EachFamilyMemberMustExistAsPerson": {
+      
     }
   }
 }
