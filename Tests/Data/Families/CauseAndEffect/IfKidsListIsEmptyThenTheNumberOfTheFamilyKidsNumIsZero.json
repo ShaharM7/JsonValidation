@@ -48,10 +48,7 @@
           "peter",
           "sima"
         ],
-        "kids": [
-          "yoni",
-          "shani"
-        ],
+        "kids": [],
         "kids_num": 2
       }
     },
@@ -63,8 +60,8 @@
           "lior",
           "yuval"
         ],
-        "kids": [],
-        "kids_num": 5
+        "kids": null,
+        "kids_num": 0
       }
     }
   ]

@@ -1,6 +1,7 @@
 "# JsonValidation" 
 
 Starting points:
+* The json schema uses json draft with version: 2020-12 (Notice with $schema key)
 * String can be upper case and then we can ignore case sensitive tests
 * Family can be without kids - New parents :)
 * Person can't be without parents (Except Adam and Eve ;)
@@ -13,6 +14,7 @@ Starting points:
 * If integer type is empty it became string (For example: "") and error will appear,
     so no needs to cover it with test.
     And if I Will not fill the field error will appear.
+* Kid age until 17, and above 18 he is a parent
   
 
 * The tests are divided "People" section and "Families" section and as some parts:
@@ -23,6 +25,8 @@ Starting points:
       (Handle with that by regex expression in json schema)
     * What is happens when field is empty ?
       (Handle with that by definition of: "nonEmptyString")
+    * What if the fields dependent on each other ?
+      (Handle with that by if else then key word)
       
 * Each person must belong to family. Each family member must exist as a person.
 We can handle with that by 

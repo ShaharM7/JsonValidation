@@ -5,7 +5,7 @@ using static CYeAutomation.Loading.LoadingFiles;
 
 namespace CYeAutomation.Tests.FamiliesSectionTests
 {
-    public class MissingFamilyFieldsTests : BaseTest
+    public class FamilyMissingFieldsTests : BaseTest
     {
         // Missing Families section 
         [Test]

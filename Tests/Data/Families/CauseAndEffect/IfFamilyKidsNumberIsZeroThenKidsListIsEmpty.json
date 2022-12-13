@@ -52,7 +52,7 @@
           "yoni",
           "shani"
         ],
-        "kids_num": 2
+        "kids_num": 0
       }
     },
     {
@@ -63,7 +63,7 @@
           "lior",
           "yuval"
         ],
-        "kids": ["Shahar", "Eliyahu"],
+        "kids": null,
         "kids_num": 0
       }
     }

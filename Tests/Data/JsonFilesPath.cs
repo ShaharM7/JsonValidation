@@ -46,6 +46,11 @@
         public const string PersonFamilyMemberEmptyPath = "Tests/Data/People/EmptyFields/PersonFamilyMemberEmpty.json";
         
         
+        // Cause and effect
+        public const string IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeenPath = "Tests/Data/People/CauseAndEffect/IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeen.json";
+        public const string IfPersonAgeIsGraterThenEighteenHisFamilyMemberIsParentPath = "Tests/Data/People/CauseAndEffect/IfPersonAgeIsGraterThenEighteenHisFamilyMemberIsParent.json";
+        
+        
         
         // "Families section":
         public const string MissingFamiliesSectionPath = "Tests/Data/Families/MissingFields/missingFamiliesField.json";
@@ -87,8 +92,10 @@
         public const string FamilySurnameFieldEmptyPath = "Tests/Data/Families/EmptyFields/familySurnameFieldEmpty.json";
         public const string FamilyParentsFieldEmptyPath = "Tests/Data/Families/EmptyFields/familyParentsFieldEmpty.json";
         
-        
         // Cause and effect
-        public const string IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeen = "Tests/Data/People/CauseAndEffect/IfFamilyMemberIsKidSoHisMaximumAgeIsSeventeen.json";
+        public const string IfFamilyKidsNumberIsZeroThenKidsListIsEmptyPath = "Tests/Data/Families/CauseAndEffect/IfFamilyKidsNumberIsZeroThenKidsListIsEmpty.json";
+        public const string IfKidsListIsEmptyThenTheNumberOfTheFamilyKidsNumIsZeroPath = "Tests/Data/Families/CauseAndEffect/IfKidsListIsEmptyThenTheNumberOfTheFamilyKidsNumIsZero.json";
+        public const string EachPersonMustBelongToFamilyPath = "Tests/Data/Families/CauseAndEffect/eachPersonMustBelongToFamily.json";
+        public const string EachFamilyMemberMustExistAsPersonPath = "Tests/Data/Families/CauseAndEffect/eachFamilyMemberMustExistAsPerson.json";
     }
 }

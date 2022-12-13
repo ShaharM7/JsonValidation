@@ -55,16 +55,16 @@
                 "kid",
                 "parent"
               ]
-            },
-            "if": {
-              "properties": { "family_member": { "const": "kid" } }
-            },
-            "then": {
-              "properties": { "age": { "maximum": 17 } }
-            },
-            "else": {
-              "properties": { "age": { "minimum": 18} }
             }
+          },
+          "if": {
+            "properties": { "family_member": { "const": "kid" } }
+          },
+          "then": {
+            "properties": { "age": { "maximum": 17 } }
+          },
+          "else": {
+            "properties": { "age": { "minimum": 18 } }
           }
         }
       }
@@ -108,12 +108,22 @@
               "items": {
                 "type": "string",
                 "pattern": "^[A-Za-z\\s]*$"
-              }
+              },
+              "minItems": 0
             },
             "kids_num": {
               "type": "number",
               "minimum": 0
             }
+          },
+          "if": {
+            "properties": { "kids_num": { "maximum": 0 } }
+          },
+          "then": {
+            "properties": { "kids": { "maxItems": 0 } }
+          },
+          "else": {
+            "properties": { "kids": { "minItems": 1 } }
           }
         }
       }

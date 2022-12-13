@@ -5,7 +5,7 @@ using static CYeAutomation.Tests.Data.JsonFilesPath;
 
 namespace CYeAutomation.Tests.PeopleSectionTests
 {
-    public class MissingPeopleFieldsTests : BaseTest
+    public class PeopleMissingFieldsTests : BaseTest
     {
         // Missing Person section
         [Test]
