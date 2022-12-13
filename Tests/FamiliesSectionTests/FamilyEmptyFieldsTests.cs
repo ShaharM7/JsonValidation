@@ -13,7 +13,7 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
             var jsonValue = LoadingJsonAsJobject(FamilySurnameFieldEmptyPath);
             Assert.IsFalse(jsonValue.IsValid(JsonSchema!));
         }
-        
+
         [Test]
         public void WhenFamilyParentsFieldEmpty_ThenTheJsonIsInvalid()
         {

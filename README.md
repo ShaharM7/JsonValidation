@@ -15,6 +15,7 @@ Starting points:
     so no needs to cover it with test.
     And if I Will not fill the field error will appear.
 * Kid age until 17, and above 18 he is a parent
+* Each person must belong to family. Each family member must exist as a person.
   
 
 * The tests are divided "People" section and "Families" section and as some parts:
@@ -27,7 +28,7 @@ Starting points:
       (Handle with that by definition of: "nonEmptyString")
     * What if the fields dependent on each other ?
       (Handle with that by if else then key word)
+    * Cause and effect between entities
       
-* Each person must belong to family. Each family member must exist as a person.
-We can handle with that by 
+
       

@@ -32,14 +32,14 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
             var familiesStatus = LoadingJsonAsJobject(EachPersonMustBelongToFamilyPath);
 
             var peopleList = familiesStatus.SelectToken("people") as JArray;
-            var people = peopleList!.First! .ToArray();
+            var people = peopleList!.First!.ToArray();
 
             var familiesList = familiesStatus.SelectToken("families") as JArray;
             var families = familiesList!.First!.ToArray();
 
 
             IList<string> familySurnames = families.Select(family => family.First()
-                .SelectToken("surname") as JValue)
+                    .SelectToken("surname") as JValue)
                 .Select(familySurname => familySurname!.Value!.ToString()!).ToList();
 
             IList<string> personSurnames = new List<string>();
@@ -56,10 +56,10 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
         public void WhenPersonNameNotPartOfParents_OrPartOfKids_ThenJsonIsInvalid()
         {
             var familiesStatus = LoadingJsonAsJobject(EachFamilyMemberMustExistAsPersonPath);
-            
+
             var peopleList = familiesStatus.SelectToken("people") as JArray;
             var people = peopleList!.First!.ToArray();
-            
+
             var familiesList = familiesStatus.SelectToken("families") as JArray;
             var families = familiesList!.First!.ToArray();
 
@@ -72,7 +72,7 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
             {
                 var familyParentsList = family.First().SelectToken("parents") as JArray;
                 var familyKidsList = family.First().SelectToken("kids") as JArray;
-                
+
                 foreach (var personName in personNames)
                 {
                     bool isPersonNameInParentList = familyParentsList!.Contains(personName);
@@ -81,8 +81,5 @@ namespace CYeAutomation.Tests.FamiliesSectionTests
                 }
             }
         }
-        
-        
-        
     }
 }

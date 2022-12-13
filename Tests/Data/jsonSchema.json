@@ -59,13 +59,25 @@
             }
           },
           "if": {
-            "properties": { "family_member": { "const": "kid" } }
+            "properties": {
+              "family_member": {
+                "const": "kid"
+              }
+            }
           },
           "then": {
-            "properties": { "age": { "maximum": 17 } }
+            "properties": {
+              "age": {
+                "maximum": 17
+              }
+            }
           },
           "else": {
-            "properties": { "age": { "minimum": 18 } }
+            "properties": {
+              "age": {
+                "minimum": 18
+              }
+            }
           }
         }
       }
@@ -120,13 +132,25 @@
           "allOf": [
             {
               "if": {
-                "properties": { "kids_num": { "maximum": 0 } }
+                "properties": {
+                  "kids_num": {
+                    "maximum": 0
+                  }
+                }
               },
               "then": {
-                "properties": { "kids": { "maxItems": 0 } }
+                "properties": {
+                  "kids": {
+                    "maxItems": 0
+                  }
+                }
               },
               "else": {
-                "properties": { "kids": { "minItems": 1 } }
+                "properties": {
+                  "kids": {
+                    "minItems": 1
+                  }
+                }
               }
             }
           ]
@@ -138,10 +162,6 @@
     "nonEmptyString": {
       "type": "string",
       "minLength": 1
-    },
-    "personMustBelongToFamily": {
-    },
-    "eachFamilyMemberMustExistAsPerson": {
     }
   }
 }
