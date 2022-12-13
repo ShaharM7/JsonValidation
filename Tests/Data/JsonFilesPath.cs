@@ -93,8 +93,8 @@
         public const string FamilyParentsFieldEmptyPath = "Tests/Data/Families/EmptyFields/familyParentsFieldEmpty.json";
         
         // Cause and effect
-        public const string IfFamilyKidsNumberIsZeroThenKidsListIsEmptyPath = "Tests/Data/Families/CauseAndEffect/IfFamilyKidsNumberIsZeroThenKidsListIsEmpty.json";
-        public const string IfKidsListIsEmptyThenTheNumberOfTheFamilyKidsNumIsZeroPath = "Tests/Data/Families/CauseAndEffect/IfKidsListIsEmptyThenTheNumberOfTheFamilyKidsNumIsZero.json";
+        public const string FamilyKidsNumberZeroAndKidsListNotEmptyPath = "Tests/Data/Families/CauseAndEffect/familyKidsNumberZeroAndKidsListNotEmpty.json";
+        public const string FamilyKidsListEmptyAndKidsNumNotZeroPath = "Tests/Data/Families/CauseAndEffect/familyKidsListEmptyAndKidsNumNotZero.json";
         public const string EachPersonMustBelongToFamilyPath = "Tests/Data/Families/CauseAndEffect/eachPersonMustBelongToFamily.json";
         public const string EachFamilyMemberMustExistAsPersonPath = "Tests/Data/Families/CauseAndEffect/eachFamilyMemberMustExistAsPerson.json";
     }

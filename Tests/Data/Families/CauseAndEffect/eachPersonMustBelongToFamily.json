@@ -33,7 +33,7 @@
       },
       "21341": {
         "name": "lior",
-        "surname": "yakir",
+        "surname": "Refaeli",
         "age": 46,
         "family_member": "parent"
       }
@@ -60,6 +60,7 @@
         "surname": "yakir",
         "has_kids": false,
         "parents": [
+          "lior",
           "yuval"
         ],
         "kids": null,

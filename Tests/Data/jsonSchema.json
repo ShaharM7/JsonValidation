@@ -1,5 +1,6 @@
 ﻿{
   "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://families-status.com",
   "type": "object",
   "required": [
     "people",
@@ -116,15 +117,19 @@
               "minimum": 0
             }
           },
-          "if": {
-            "properties": { "kids_num": { "maximum": 0 } }
-          },
-          "then": {
-            "properties": { "kids": { "maxItems": 0 } }
-          },
-          "else": {
-            "properties": { "kids": { "minItems": 1 } }
-          }
+          "allOf": [
+            {
+              "if": {
+                "properties": { "kids_num": { "maximum": 0 } }
+              },
+              "then": {
+                "properties": { "kids": { "maxItems": 0 } }
+              },
+              "else": {
+                "properties": { "kids": { "minItems": 1 } }
+              }
+            }
+          ]
         }
       }
     }

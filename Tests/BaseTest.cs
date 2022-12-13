@@ -12,7 +12,7 @@ namespace CYeAutomation.Tests
         protected JSchema? JsonSchema;
 
         [SetUp]
-        public void LoadJsonJSchema()
+        public void LoadJsonJvSchema()
         {
             JsonSchema = LoadingJsonAsJSchema(JsonSchemaFilePath);
         }
